@@ -18,19 +18,25 @@ function ProdutoCard({
 
             <p>{descricao}</p>
 
-            <p>
-                <strong>Categoria:</strong> {categoria}
-            </p>
+            {categoria && (
+                <p>
+                    <strong>Categoria:</strong> {categoria}
+                </p>
+            )}
 
-            <p className="avaliacao">
-                {avaliacao}
-            </p>
+            {avaliacao && (
+                <p className="avaliacao">
+                    {avaliacao}
+                </p>
+            )}
 
-            <p>{parcelas}</p>
+            {parcelas && <p>{parcelas}</p>}
 
-            <p>
-                Disponíveis: {estoque}
-            </p>
+            {estoque !== undefined && (
+                <p>
+                    Disponíveis: {estoque}
+                </p>
+            )}
 
             <button>Comprar</button>
         </div>
